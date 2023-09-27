@@ -1,51 +1,59 @@
-.container {
-    width: 1140px;
-    max-width: 100%;
-    margin: auto;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap');
 
-#nav {
-    background: crimson;
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", monospace;
+  }
+  
+  #nav {
+    background-color:#333;
     padding-top: 10px;
     padding-bottom: 10px;
-}
-
-#nav ul li {
+  }
+  #nav ul li {
     list-style: none;
     display: inline;
     padding-top: 5px;
     padding-bottom: 5px;
     margin-left: 5px;
     margin-right: 5px;
-}
-
-#nav ul#menu li {
+    
+  }
+  #nav ul#menu li {
     float: left;
     border-radius: 8px;
-}
-
-#nav ul.right li {
+  }
+  #nav ul.right li {
     float: right;
-}
-
-.clearfix::before ,
-.clearfix::after {
+  }
+  .clearfix::before,
+  .clearfix::after {
     content: "";
     display: block;
     clear: both;
-}
-
-#nav ul li a {
+  }
+  #nav ul li  {
     padding-left: 10px;
     padding-right: 10px;
     color: white;
     text-decoration: none;
+    
+  }
+  #nav ul#menu li.active {
+    background-color: grey;
+  }
+  #nav ul#menu li:hover {
+    background-color: grey;
+  }
+  .inicio{
+    text-align: center;
+    color: white;
+    background-image: url(".assets/img/info.jpg")  ;
+    background-color: purple;
 }
 
-#nav ul#menu li.active {
-    background-color: darkred;
-}
-
-#nav ul#menu li:hover { 
-    background-color: darkred;
-}
