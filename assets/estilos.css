@@ -50,10 +50,32 @@
   #nav ul#menu li:hover {
     background-color: grey;
   }
-  .inicio{
-    text-align: center;
-    color: white;
-    background-image: url(".assets/img/info.jpg")  ;
+  
+  .purple{
     background-color: purple;
+  }
+  
+  .inicio{
+   position: relative;
+   text-align: center;
+   color: white;
+  }
+   
+   .purple  ::before{
+    background-image: url( '../img/info.jpg')  ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    position: absolute;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+}
+
+.apoi{
+  text-align: center;
 }
 
