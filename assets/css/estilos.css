@@ -10,12 +10,12 @@
     font-family: "Poppins", monospace;
   }
   
-  #nav {
+  nav {
     background-color:#333;
     padding-top: 10px;
     padding-bottom: 10px;
   }
-  #nav ul li {
+  nav ul li {
     list-style: none;
     display: inline;
     padding-top: 5px;
@@ -24,11 +24,11 @@
     margin-right: 5px;
     
   }
-  #nav ul#menu li {
+  nav ul#menu li {
     float: left;
     border-radius: 8px;
   }
-  #nav ul.right li {
+  nav ul.right li {
     float: right;
   }
   .clearfix::before,
@@ -37,45 +37,60 @@
     display: block;
     clear: both;
   }
-  #nav ul li  {
+  nav ul li  {
     padding-left: 10px;
     padding-right: 10px;
     color: white;
     text-decoration: none;
     
   }
-  #nav ul#menu li.active {
+  nav ul#menu li.active {
     background-color: grey;
   }
-  #nav ul#menu li:hover {
+  nav ul#menu li:hover {
     background-color: grey;
   }
   
   .purple{
-    background-color: purple;
+     background-color: purple;
+     position: relative;
+     color: white;
+     max-height: 700px;
   }
   
-  .inicio{
+  #inicio{
    position: relative;
    text-align: center;
-   color: white;
+   padding-top: 90px ;
+   height: 300px;
+   font-size: 30px;
+    
   }
    
-   .purple  ::before{
-    background-image: url( '../img/info.jpg')  ;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-    position: absolute;
-    opacity: 0.2;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+  .purple::before{
+      content: '';
+      background-image: url( '../img/info.jpg');
+      height: 300px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      opacity: 0.5;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+}
 
+header h1, header p {
+  position: relative;
+  color: #ffffff;  
+  line-height: 0.9;
+  text-align: center;
 }
 
 .apoi{
+  background-color: #f5f5f5;
   text-align: center;
 }
 
