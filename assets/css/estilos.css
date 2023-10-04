@@ -1,96 +1,105 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap');
 
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: "Poppins", monospace;
-  }
-  
-  nav {
-    background-color:#333;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  nav ul li {
-    list-style: none;
-    display: inline;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    
-  }
-  nav ul#menu li {
-    float: left;
-    border-radius: 8px;
-  }
-  nav ul.right li {
-    float: right;
-  }
-  .clearfix::before,
-  .clearfix::after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-  nav ul li  {
-    padding-left: 10px;
-    padding-right: 10px;
-    color: white;
-    text-decoration: none;
-    
-  }
-  nav ul#menu li.active {
-    background-color: grey;
-  }
-  nav ul#menu li:hover {
-    background-color: grey;
-  }
-  
-  .purple{
-     background-color: purple;
-     position: relative;
-     color: white;
-     max-height: 700px;
-  }
-  
-  #inicio{
-   position: relative;
-   text-align: center;
-   padding-top: 90px ;
-   height: 300px;
-   font-size: 30px;
-    
-  }
-   
-  .purple::before{
-      content: '';
-      background-image: url( '../img/info.jpg');
-      height: 300px;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      position: absolute;
-      opacity: 0.5;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-header h1, header p {
+body {
+  font-family: "Poppins", monospace;
+}
+
+nav {
+  background-color: #333;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+
+}
+
+nav ul#menu li {
+  float: left;
+  border-radius: 8px;
+}
+
+nav ul.right li {
+  float: right;
+}
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+nav ul li {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+  text-decoration: none;
+
+}
+
+nav ul#menu li.active {
+  background-color: grey;
+}
+
+nav ul#menu li:hover {
+  background-color: grey;
+}
+
+.purple {
+  background-color: purple;
   position: relative;
-  color: #ffffff;  
+  color: white;
+  max-height: 700px;
+}
+
+#inicio {
+  position: relative;
+  text-align: center;
+  padding-top: 90px;
+  height: 300px;
+  font-size: 30px;
+
+}
+
+.purple::before {
+  content: '';
+  background-image: url('../img/info.jpg');
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+header h1,
+header p {
+  position: relative;
+  color: #ffffff;
   line-height: 0.9;
   text-align: center;
 }
 
-.apoi{
+.apoi {
   background-color: #f5f5f5;
   text-align: center;
+  align-items: center;
 }
 
