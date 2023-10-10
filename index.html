@@ -66,9 +66,74 @@
 
         setInterval(changeItem, 3000);
     </script>
+        <section class="slider">
+
+            <div class="seta arrow-left"><i class="fas fa-chevron-circle-left"></i></div>
+      
+              <img src="assets/img/img.jpg" alt="slide-1.jpg">
+              <img src="assets/img/img2.jpg" alt="slide-2.jpg">
+              <img src="assets/img/img3.webp" alt="slide-3.jpg">
+              <img src="assets/img/img4.jpg" alt="slide-4.jpg">
+      
+            <div class="seta arrow-right"><i class="fas fa-chevron-circle-right"></i></div>
+      
+            <div class="paginacao">
+          
+              <div class="botao"> <i class="far fa-circle"></i> </div>
+              <div class="botao"> <i class="far fa-circle"></i> </div>
+              <div class="botao"> <i class="far fa-circle"></i> </div>
+              <div class="botao"> <i class="far fa-circle"></i> </div>
+          
+            </div>
+          
+          </section><!--slider-->
+          <script>
+
+            const imgs = document.querySelectorAll(".slider img");
+            const dots = document.querySelectorAll(".botao i");
+            const leftArrow = document.querySelector(".arrow-left");
+            const rightArrow = document.querySelector(".arrow-right");
+            
+            let currentIndexx = 0;
+            let time = 2000; //Tempo padrão para apresentação de slides automática
+            
+            const defClass = (startPos, index) => {
+              for (let i = startPos; i < imgs.length; i++) {
+                imgs[i].style.display = "none";
+                dots[i].classList.remove("fa-dot-circle");
+                dots[i].classList.add("fa-circle");
+              }
+              imgs[index].style.display = "block";
+              dots[index].classList.add("fa-dot-circle");
+            };
+            
+            defClass(1, 0);
+            
+            leftArrow.addEventListener("click", function(){
+              currentIndexx <= 0 ? currentIndexx = imgs.length-1 : currentIndexx--;
+              defClass(0, currentIndexx);
+            });
+            
+            rightArrow.addEventListener("click", function(){
+              currentIndexx >= imgs.length-1 ? currentIndexx = 0 : currentIndexx++;
+              defClass(0, currentIndexx);
+            });
+            
+            const startAutoSlide = () => {
+              setInterval(() => {
+                currentIndexx >= imgs.length-1 ? currentIndexx = 0 : currentIndexx++;
+                defClass(0, currentIndexx);
+              }, time);
+            };
+            
+            startAutoSlide(); //Inicia o slideshow
+            
+            </script>
 
     <footer>
-
+        <div class="footer">
+            <p>© Arthur Gaio e Allan F. Fantin 2023</p>
+        </div>
     </footer>
 
 </body>
