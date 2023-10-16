@@ -2,141 +2,167 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Arthur Gaio e Allan Fantin">
-    <link rel="stylesheet" href="assets/css/estilos.css">
-    <link rel="script" href="script.js">
-    <title>VII SCI </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Arthur Gaio e Allan Fantin">
+  <link rel="stylesheet" href="assets/css/estilos.css">
+  <link rel="script" href="script.js">
+  <title>VII SCI </title>
 </head>
 
 <body>
-    <nav>
-        <div class="container clearflix">
-            <ul>
-                <li>Maratona</li>
-                <li>Jogos Eletrônicos</li>
-                <li>Cronograma</li>
-                <li>Fotos</li>
-                <li>Inscreva-se</li>
-            </ul>
-        </div>
-    </nav>
+  <nav>
+    <div class="container clearflix">
+      <ul>
+        <li>Maratona</li>
+        <li>Jogos Eletrônicos</li>
+        <li>Cronograma</li>
+        <li>Fotos</li>
+        <li>Inscreva-se</li>
+      </ul>
+    </div>
+  </nav>
 
-    <header>
-        <div id="inicio" class="purple">
-            <h1>VII-SCI</h1>
-            <p>Vai começar a mais aguardada Semana Acadêmica da Computação e Informática </p>
-        </div>
-    </header>
+  <header>
+    <div id="inicio" class="purple">
+      <h1>VII-SCI</h1>
+      <p>Vai começar a mais aguardada Semana Acadêmica da Computação e Informática </p>
+    </div>
+  </header>
 
-    <div class="apoi">
-        <h1>Apoiadores:</h1>
-        <a href="https://www.instagram.com/subwaybrasil/"><img src="assets/img/subway.png" width="300px"></a>
-        <a href="https://www.instagram.com/centroinovacaovideira/"><img src="assets/img/centro de inovacao.png"
-                width="300px"></a>
-        <a href="https://www.instagram.com/casa_do_computador/"><img src="assets/img/casa do computador.png"
-                width="300px"></a>
+  <div class="apoi">
+    <h1>Apoiadores:</h1>
+    <a class="col-4" href="https://www.instagram.com/subwaybrasil/"><img src="assets/img/subway.png" width="400px"></a>
+    <a class="col-4" href="https://www.instagram.com/centroinovacaovideira/"><img
+        src="assets/img/centro de inovacao.png" width="400px"></a>
+    <a class="col-4" href="https://www.instagram.com/casa_do_computador/"><img src="assets/img/casa do computador.png"
+        width="400px"></a>
+
+  </div>
+
+
+
+
+  <section class="slider">
+
+    <div class="seta arrow-left"><i class="fas fa-chevron-circle-left"></i></div>
+
+    <img src="assets/img/img.jpg" alt="slide-1.jpg">
+    <img src="assets/img/img2.jpg" alt="slide-2.jpg">
+    <img src="assets/img/img3.webp" alt="slide-3.jpg">
+    <img src="assets/img/img4.jpg" alt="slide-4.jpg">
+
+    <div class="seta arrow-right"><i class="fas fa-chevron-circle-right"></i></div>
+
+    <div class="paginacao">
+
+      <div class="botao"> <i class="far fa-circle"></i> </div>
+      <div class="botao"> <i class="far fa-circle"></i> </div>
+      <div class="botao"> <i class="far fa-circle"></i> </div>
+      <div class="botao"> <i class="far fa-circle"></i> </div>
 
     </div>
 
+  </section><!--slider-->
+  <script>
 
+    const imgs = document.querySelectorAll(".slider img");
+    const dots = document.querySelectorAll(".botao i");
+    const leftArrow = document.querySelector(".arrow-left");
+    const rightArrow = document.querySelector(".arrow-right");
 
-    <div class="carousel-container">
-        <div class="carousel-item active"><img src="assets/img/1.jpg"></div>
-        <div class="carousel-item"><img src="assets/img/2.jpg"></div>
-        <div class="carousel-item"><img src="assets/img/3.jpg"></div>
-    </div>
+    let currentIndexx = 0;
+    let time = 2000; //Tempo padrão para apresentação de slides automática
 
-    <script>
-        let currentIndex = 0;
-        const items = document.querySelectorAll('.carousel-item');
+    const defClass = (startPos, index) => {
+      for (let i = startPos; i < imgs.length; i++) {
+        imgs[i].style.display = "none";
+        dots[i].classList.remove("fa-dot-circle");
+        dots[i].classList.add("fa-circle");
+      }
+      imgs[index].style.display = "block";
+      dots[index].classList.add("fa-dot-circle");
+    };
 
-        function changeItem() {
-            items[currentIndex].classList.remove('active');
+    defClass(1, 0);
 
-            currentIndex++;
+    leftArrow.addEventListener("click", function () {
+      currentIndexx <= 0 ? currentIndexx = imgs.length - 1 : currentIndexx--;
+      defClass(0, currentIndexx);
+    });
 
-            if (currentIndex >= items.length) {
-                currentIndex = 0;
-            }
+    rightArrow.addEventListener("click", function () {
+      currentIndexx >= imgs.length - 1 ? currentIndexx = 0 : currentIndexx++;
+      defClass(0, currentIndexx);
+    });
 
-            items[currentIndex].classList.add('active');
-        }
+    const startAutoSlide = () => {
+      setInterval(() => {
+        currentIndexx >= imgs.length - 1 ? currentIndexx = 0 : currentIndexx++;
+        defClass(0, currentIndexx);
+      }, time);
+    };
 
-        setInterval(changeItem, 3000);
-    </script>
-        <section class="slider">
+    startAutoSlide(); //Inicia o slideshow
 
-            <div class="seta arrow-left"><i class="fas fa-chevron-circle-left"></i></div>
-      
-              <img src="assets/img/img.jpg" alt="slide-1.jpg">
-              <img src="assets/img/img2.jpg" alt="slide-2.jpg">
-              <img src="assets/img/img3.webp" alt="slide-3.jpg">
-              <img src="assets/img/img4.jpg" alt="slide-4.jpg">
-      
-            <div class="seta arrow-right"><i class="fas fa-chevron-circle-right"></i></div>
-      
-            <div class="paginacao">
-          
-              <div class="botao"> <i class="far fa-circle"></i> </div>
-              <div class="botao"> <i class="far fa-circle"></i> </div>
-              <div class="botao"> <i class="far fa-circle"></i> </div>
-              <div class="botao"> <i class="far fa-circle"></i> </div>
-          
-            </div>
-          
-          </section><!--slider-->
-          <script>
+  </script>
 
-            const imgs = document.querySelectorAll(".slider img");
-            const dots = document.querySelectorAll(".botao i");
-            const leftArrow = document.querySelector(".arrow-left");
-            const rightArrow = document.querySelector(".arrow-right");
-            
-            let currentIndexx = 0;
-            let time = 2000; //Tempo padrão para apresentação de slides automática
-            
-            const defClass = (startPos, index) => {
-              for (let i = startPos; i < imgs.length; i++) {
-                imgs[i].style.display = "none";
-                dots[i].classList.remove("fa-dot-circle");
-                dots[i].classList.add("fa-circle");
-              }
-              imgs[index].style.display = "block";
-              dots[index].classList.add("fa-dot-circle");
-            };
-            
-            defClass(1, 0);
-            
-            leftArrow.addEventListener("click", function(){
-              currentIndexx <= 0 ? currentIndexx = imgs.length-1 : currentIndexx--;
-              defClass(0, currentIndexx);
-            });
-            
-            rightArrow.addEventListener("click", function(){
-              currentIndexx >= imgs.length-1 ? currentIndexx = 0 : currentIndexx++;
-              defClass(0, currentIndexx);
-            });
-            
-            const startAutoSlide = () => {
-              setInterval(() => {
-                currentIndexx >= imgs.length-1 ? currentIndexx = 0 : currentIndexx++;
-                defClass(0, currentIndexx);
-              }, time);
-            };
-            
-            startAutoSlide(); //Inicia o slideshow
-            
-            </script>
-
-    <footer>
-        <div class="footer">
-            <p>© Arthur Gaio e Allan F. Fantin 2023</p>
+  <div>
+    <figure class="snip1477">
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample38.jpg" alt="sample38" />
+      <div class="title">
+        <div>
+          <h2>Penny</h2>
+          <h4>Tool</h4>
         </div>
-    </footer>
+      </div>
+      <figcaption>
+        <p>Which is worse, that everyone has his price, or that the price is always so low.</p>
+      </figcaption>
+      <a href="#"></a>
+    </figure>
+    <figure class="snip1477 hover"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample91.jpg"
+        alt="sample91" />
+      <div class="title">
+        <div>
+          <h2>Ingredia</h2>
+          <h4>Nutrisha</h4>
+        </div>
+      </div>
+      <figcaption>
+        <p>I'm killing time while I wait for life to shower me with meaning and happiness.</p>
+      </figcaption>
+      <a href="#"></a>
+    </figure>
+    <figure class="snip1477"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample35.jpg"
+        alt="sample35" />
+      <div class="title">
+        <div>
+          <h2>Hans</h2>
+          <h4>Down</h4>
+        </div>
+      </div>
+      <figcaption>
+        <p>The only skills I have the patience to learn are those that have no real application in life. </p>
+      </figcaption>
+      <a href="#"></a>
+    </figure>
+  </div>
 
-</body>
+  <script>
+    $(".hover").mouseleave(
+      function () {
+        $(this).removeClass("hover");
+      }
+    );
+  </script>
+
+  <footer>
+    <div class="footer">
+      <p>© Arthur Gaio e Allan F. Fantin 2023</p>
+    </div>
+  </footer>
+  < </body>
 
 
 </html>
