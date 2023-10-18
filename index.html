@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Arthur Gaio e Allan Fantin">
   <link rel="stylesheet" href="assets/css/estilos.css">
-  <link rel="script" href="script.js">
+
   <title>VII SCI </title>
 </head>
 
@@ -40,17 +40,17 @@
 
   </div>
 
-
-
-
+  <div class="jogos">
+    <h1>Jogos Eletrônicos</h1>
+  </div>
   <section class="slider">
 
     <div class="seta arrow-left"><i class="fas fa-chevron-circle-left"></i></div>
 
     <img src="assets/img/img.jpg" alt="slide-1.jpg">
     <img src="assets/img/img2.jpg" alt="slide-2.jpg">
-    <img src="assets/img/img3.webp" alt="slide-3.jpg">
-    <img src="assets/img/img4.jpg" alt="slide-4.jpg">
+    <img src="assets/img/img3.jpg" alt="slide-3.jpg">
+    <img src="assets/img/img4.webp" alt="slide-4.jpg">
 
     <div class="seta arrow-right"><i class="fas fa-chevron-circle-right"></i></div>
 
@@ -64,105 +64,62 @@
     </div>
 
   </section><!--slider-->
-  <script>
 
-    const imgs = document.querySelectorAll(".slider img");
-    const dots = document.querySelectorAll(".botao i");
-    const leftArrow = document.querySelector(".arrow-left");
-    const rightArrow = document.querySelector(".arrow-right");
-
-    let currentIndexx = 0;
-    let time = 2000; //Tempo padrão para apresentação de slides automática
-
-    const defClass = (startPos, index) => {
-      for (let i = startPos; i < imgs.length; i++) {
-        imgs[i].style.display = "none";
-        dots[i].classList.remove("fa-dot-circle");
-        dots[i].classList.add("fa-circle");
-      }
-      imgs[index].style.display = "block";
-      dots[index].classList.add("fa-dot-circle");
-    };
-
-    defClass(1, 0);
-
-    leftArrow.addEventListener("click", function () {
-      currentIndexx <= 0 ? currentIndexx = imgs.length - 1 : currentIndexx--;
-      defClass(0, currentIndexx);
-    });
-
-    rightArrow.addEventListener("click", function () {
-      currentIndexx >= imgs.length - 1 ? currentIndexx = 0 : currentIndexx++;
-      defClass(0, currentIndexx);
-    });
-
-    const startAutoSlide = () => {
-      setInterval(() => {
-        currentIndexx >= imgs.length - 1 ? currentIndexx = 0 : currentIndexx++;
-        defClass(0, currentIndexx);
-      }, time);
-    };
-
-    startAutoSlide(); //Inicia o slideshow
-
-  </script>
-
-  <div>
-    <figure class="snip1477">
-      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample38.jpg" alt="sample38" />
-      <div class="title">
-        <div>
-          <h2>Penny</h2>
-          <h4>Tool</h4>
-        </div>
-      </div>
-      <figcaption>
-        <p>Which is worse, that everyone has his price, or that the price is always so low.</p>
-      </figcaption>
-      <a href="#"></a>
-    </figure>
-    <figure class="snip1477 hover"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample91.jpg"
-        alt="sample91" />
-      <div class="title">
-        <div>
-          <h2>Ingredia</h2>
-          <h4>Nutrisha</h4>
-        </div>
-      </div>
-      <figcaption>
-        <p>I'm killing time while I wait for life to shower me with meaning and happiness.</p>
-      </figcaption>
-      <a href="#"></a>
-    </figure>
-    <figure class="snip1477"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample35.jpg"
-        alt="sample35" />
-      <div class="title">
-        <div>
-          <h2>Hans</h2>
-          <h4>Down</h4>
-        </div>
-      </div>
-      <figcaption>
-        <p>The only skills I have the patience to learn are those that have no real application in life. </p>
-      </figcaption>
-      <a href="#"></a>
-    </figure>
+  <div class="botao">
+    <button class="bot">Inscreva-se</button>
   </div>
 
-  <script>
-    $(".hover").mouseleave(
-      function () {
-        $(this).removeClass("hover");
-      }
-    );
-  </script>
+  <script type="text/javascript" src="script.js"></script>
+  <div class="cronograma">
+    <div class="dia">
+        <h2>Segunda-feira</h2>
+        <ul>
+            <li>Talking - A profissão de TI no Brasil e no Exterior 09:00 - 10:00</li>
+            <li>Palestra - Domando o caos de sistemas legados gigantescos 10:45 - 11:30</li>
+            <li>Oficina 1 - Química na prática 13:15 - 15:15</li>
+            <li>Oficina 2 - Introdução a Linguagem de Programação Python 13:15 - 17:15</li>
+            <li>Oficina 3 - Arduíno 13:15 - 17:15</li>
+            <li>Oficina 4 - Introdução: React.JS 13:15 - 16:15</li>
+            <li>Oficina 5 - Dando uma digitalizada na rotina/produtividade 13:15 - 15:15</li>
+            <li>Oficina 6 - Gestão Financeira 13:15 - 15:15</li>
+            <li>Oficina 7 - Criando Jogos com o GameMaker 13:15 - 15:45</li>
+            <li>Oficina 8 - Fotografia na prática 13:30 - 15:30</li>
+        </ul>
+    </div>
+    <div class="dia">
+        <h2>Terça-feira</h2>
+        <ul>
+            <li>Oficina 1 - Desenho impressão 3D 08:00 - 12:00</li>
+            <li>Oficina 2 - Board Games como contexto para a prática de Língua Inglesa 08:00 - 11:00</li>
+            <li>Oficina 3 - Firewalls Desvendados: Mantendo a Porta Trancada 08:00 - 11:00</li>
+            <li>Oficina 4 - Introdução a Docker 08:00 - 10:00</li>
+            <li>Oficina 5 - Latequiando: criando documentos científicos com LaTeX 08:00 - 10:00</li>
+            <li>Oficina 6 - Animação de Superfícies no Geogebra. 08:00 - 10:00</li>
+            <li>Oficina 7 - Virei Arquiteto de software, e agora? 08:00 - 10:00</li>
+            <li>Maratona - Maratona de Programação 08:30 - 11:30</li>
+            <li>Oficina 8 - Let's Play Games! 10:00 - 12:00</li>
+            <li>Oficina 9 - Inglês instumental para T.I 10:00 - 12:00</li>
+            <li>Oficina 10 - Sociologia e Rock 10:00 - 12:00</li>
+            <li>Oficina 11 - Oficina de Dança 11:00 - 12:00</li>
+            <li>Gincana 14:00 - 16:30</li>
+        </ul>
+    </div>
+    <div class="dia">
+        <h2>Quarta-feira</h2>
+        <ul>
+            <li>Atividade 1 - Cosplay 08:00 - 12:00</li>
+            <li>Atividade 2 - Jogos de Tabuleiro 08:00 - 11:00</li>
+
+        </ul>
+    </div>
+  </div>
 
   <footer>
     <div class="footer">
       <p>© Arthur Gaio e Allan F. Fantin 2023</p>
     </div>
   </footer>
-  < </body>
+</body>
 
 
 </html>
