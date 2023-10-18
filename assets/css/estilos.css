@@ -313,6 +313,10 @@ li {
 }
 
 
+.fotos{
+  background-image: ('../img/info.jpg');
+}
+
 .footer {
 
   position: relative;
