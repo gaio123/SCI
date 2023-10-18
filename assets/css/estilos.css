@@ -58,8 +58,8 @@ nav ul#menu li:hover {
   background-color: grey;
 }
 
-.purple {
-  background-color: purple;
+.blue{
+  background-color: #1d90f5;
   position: relative;
   color: white;
   max-height: 700px;
@@ -74,9 +74,9 @@ nav ul#menu li:hover {
   align-items: bottom;
 }
 
-.purple::before {
+.blue::before {
   content: '';
-  background-image: url('../img/info.jpg');
+  background-image: url('../img/info.webp');
   height: 300px;
   background-size: cover;
   background-repeat: no-repeat;
