@@ -313,14 +313,44 @@ li {
 }
 
 
+.fotos::before{
+  content: '';
+  background-image: url('../img/info.jpg');
+  height: 700px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  opacity: 0.6;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
 .fotos{
-  background-image: ('../img/info.jpg');
+  font-size: 30px;
+  padding-top: 300px;
+  text-align: center;
+  position: relative;
+  height: 700px;
+}
+
+.fotos h1,
+.fotos p {
+  position: relative;
+  color: #ffffff;
+  line-height: 0.9;
+  text-align: center;
+  align-items: cener;
 }
 
 .footer {
+  background-color: white;
 
-  position: relative;
+  position: static ;
   bottom: 0;
   text-align: center;
   width: 100%;
+  height: 40px;
 }
