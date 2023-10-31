@@ -42,13 +42,14 @@ nav ul.right li {
   clear: both;
 }
 
-nav ul li {
+nav ul a {
   padding-left: 10px;
   padding-right: 10px;
   color: white;
   text-decoration: none;
 
 }
+
 
 nav ul#menu li.active {
   background-color: grey;
@@ -321,7 +322,6 @@ li {
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  opacity: 0.6;
   top: 0;
   left: 0;
   bottom: 0;
@@ -342,12 +342,70 @@ li {
   color: #ffffff;
   line-height: 0.9;
   text-align: center;
-  align-items: cener;
+  align-items: center;
 }
 
+.marotona::before{
+  content: '';
+  background-image: url('../img/programação.jpg');
+  height: 700px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  opacity: 1.0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.maratona{
+  font-size: 30px;
+  padding-top: 300px;
+  text-align: center;
+  position: relative;
+  height: 700px;
+}
+.maratona h1,
+.maratona p {
+  position: relative;
+  color: #242424;
+  line-height: 1.4;
+  text-align: center;
+  align-items: center;
+}
+
+.inscricao{
+  padding-top: 150px;
+  align-items: center;
+  text-align: center;
+  background-color: gray;
+  height: 400px;
+}
+
+.inscricao p{
+  font-size: 30px;
+  line-height: 1.6;
+}
+
+.inscreva{
+  border: solid 1px #1d90f5;
+  border-radius: 20px;
+  color: #1d90f5;
+  background-color: white;
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+  text-align: center;
+  height: 100px;
+  width: 200px;
+  font-size: 20px;
+}
+.inscreva:hover{
+  background-color: #1d90f5;
+  color: white;
+  transform: scale(1.2)
+}
 .footer {
   background-color: white;
-
   position: static ;
   bottom: 0;
   text-align: center;
